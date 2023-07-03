@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+#cta {
+  background-image: url('../images/bg-boost-desktop.svg');
+  backgound-repeat: no-repeat;
+  background-size: cover;
+}
+
+.ficon:hover {
+  filter: invert(79%) sepia(61%) saturate(464%) hue-rotate(130deg) brightness(89%) contrast(85%);
+}
+
+/* hamburger menu */
+
+.h {
+  cursor: pointer;
+  position: relative ;
+  width: 24px ;
+  height: 24px ;
+  transition: all 0.25s;
+}
+
+.ht, .hm, .hb {
+content:'';
+  position: absolute;
+  width: 24px ;
+  height: 2px ;
+  transform: rotate(0);
+  transition: all 0.5s;
+  top: 0 ;
+  left: 0 ;
+  background: black ;
+}
+
+.hm {
+  transform: translateY(7px);
+}
+
+.hb {
+  transform: translateY(14px);
+}
+
+.open {
+  transform: rotate(90deg);
+}
+
+.open .ht{
+  transform: rotate(45deg) translateY(2px) translateX(1px);
+}
+
+.open .hm {
+  display: none;
+}
+
+.open .hb {
+  transform: rotate(-45deg) translateY(0.7px) translateX(-1.5px);
+}
